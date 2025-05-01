@@ -12,8 +12,27 @@ export const vinController = async (req , res)=>{
     const model = req.body.model;
     const year = req.body.year;
 
+//  check if vin already exit 
+    const vinExists = await VinReport.findOne({
+        //  first backend second mera apna frontend 
+        vin 
+        
+        // vin : vin
+    })
 
-    //  Import 
+        if(vinExists){
+            
+            
+            return res.json({
+                sucess : false , 
+                message : "VIN already exist",
+            })
+
+
+
+        }
+    
+
     const report = new VinReport({
         
 

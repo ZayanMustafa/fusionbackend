@@ -12,7 +12,9 @@ const vinSchema = new mongoose.Schema({
         } , 
         vin :{
             type : String,
-            required : true
+            required : true,
+            unique : true
+
         } , 
         model : {
             type : String,

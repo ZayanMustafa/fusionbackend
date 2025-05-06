@@ -1,5 +1,5 @@
 import express from 'express';
-import vinRouter from './routes/vin.js';
+// import vinRouter from './routes/vin.js';
 import orderRouter from './routes/order.js';
 import mongoose from 'mongoose';
 import cors from 'cors'
@@ -44,7 +44,7 @@ app.listen(port, (err) => {
 
 
 // Vin Api
-app.use("/vin", vinRouter);
+// app.use("/vin", vinRouter);
 
 
 

@@ -1,77 +1,60 @@
 
 
 
-import VinReport from "../models/vin.js";
 
 
+// import VinReport from "../models/vin.js";
 
-export const vinController = async (req , res)=>{
+// export const vinController = async (req , res)=>{
 
+//  just getting the data from request body
 
-    //  just getting the data from request body
-
-    const fullName = req.body.fullName;
-    const vin = req.body.vin;
-    const model = req.body.model;
-    const year = req.body.year;
+// const fullName = req.body.fullName;
+// const vin = req.body.vin;
+// const model = req.body.model;
+// const year = req.body.year;
 
 //  check if vin already exit 
-    const vinExists = await VinReport.findOne({
-        //  first backend second mera apna frontend 
-        vin 
-        
-        // vin : vin
-    })
+// const vinExists = await VinReport.findOne({
+//  first backend second mera apna frontend 
+// vin 
 
-        if(vinExists){
-            
-            
-            return res.json({
-                sucess : false , 
-                message : "VIN already exist",
-            })
+// vin : vin
+// })
+
+// if(vinExists){
 
 
+//     return res.json({
+//         sucess : false , 
+//         message : "VIN already exist",
+//     })
+// }
 
-        }
-    
+// const report = new VinReport({
+//     fullName , vin , model , year 
+// }) 
 
+//     await report.save()
+//     return res.json({
+//         sucess : true , 
+//         message : "Your data has been saved",
+//         report
+//     })
 
-
-    const report = new VinReport({
-        
-
-        fullName , vin , model , year 
-        
-    }) 
-
-    await report.save()
-
-
-    return res.json({
-        sucess : true , 
-        message : "Your data has been saved",
-        report
-    })
-
-
-}
-
-
-
+// }
 
 
 
 // For data fetching
-export const FetchData = async ( req , res )=> {
+// export const FetchData = async (req, res) => {
 
-        const reports = await VinReport.find()
+//     const reports = await VinReport.find()
 
+//     return res.json({
+//         sucess: true,
+//         message: "Your data has been fetch",
+//         reports
+//     })
 
-        return res.json({
-            sucess : true , 
-            message : "Your data has been fetch",
-            reports
-        })
-
-}
+// }

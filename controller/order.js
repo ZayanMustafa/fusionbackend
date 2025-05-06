@@ -21,18 +21,14 @@ export const orderController = async (req , res)=>{
         order
     })
 
-
-
-
-
 }
 
 
 
+
+
+
 //  For get order data
-
-
-
 export const getOrderController = async( req , res ) =>{
 
 

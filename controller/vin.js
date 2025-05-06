@@ -1,4 +1,7 @@
-import VinReport from "../model/vin.js";
+
+
+
+import VinReport from "../models/vin.js";
 
 
 
@@ -33,6 +36,8 @@ export const vinController = async (req , res)=>{
         }
     
 
+
+
     const report = new VinReport({
         
 
@@ -57,7 +62,7 @@ export const vinController = async (req , res)=>{
 
 
 
-
+// For data fetching
 export const FetchData = async ( req , res )=> {
 
         const reports = await VinReport.find()
